@@ -23,6 +23,20 @@
                     fontFamily: {
                         sora: ['Sora', 'serif'],
                     },
+                    animation: {
+                        float: "float 3s ease-in-out infinite",
+                        fadeIn: "fadeIn 1.5s ease-out",
+                    },
+                    keyframes: {
+                        float: {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-10px)" },
+                        },
+                        fadeIn: {
+                            from: { opacity: "0", transform: "translateY(-20px)" },
+                            to: { opacity: "1", transform: "translateY(0)" },
+                        },
+                    },
                 }
             }
         }
@@ -98,14 +112,14 @@
                 Freshness <span class="text-primary">You Can <br>
                 Count</span> On, Prices You’ll Love!
             </h1>
-            <p class="text-text text-xl">
+            <p class="text-text text-xl animate-fadeIn">
                 Discover a variety of fresh groceries delivered to your doorstep.
             </p>
             <button class="btn-primary">Shop Now</button>
         </div>
         <!-- animated image -->
         <div class="">
-            <img class="mx-auto animate" src="c2-assets/hero-vegetables.png" alt="Grocery Basket">
+            <img class="mx-auto animate-float" src="c2-assets/hero-vegetables.png" alt="Grocery Basket">
         </div> 
     </header>
     <main>
