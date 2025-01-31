@@ -18,6 +18,7 @@
                     colors: {
                         primary: '#179800',
                         secoundry: '#EFEBE3',
+                        text: '#111111',
                     },
                     fontFamily: {
                         sora: ['Sora', 'serif'],
@@ -26,16 +27,92 @@
             }
         }
     </script>
+    <!-- custom styles -->
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply px-3 py-2 rounded-lg hover:bg-primary hover:text-white transition;
+            }
+            .btn-outline {
+                @apply px-[30px] py-[8px] border-[2px] border-primary hover:border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300;
+            }
+            .btn-primary {
+               @apply px-[30px] py-[10px] rounded-lg bg-primary text-white transition-transform duration-300 hover:scale-105 cursor-pointer;
+            }
+        }
+    </style>
 </head>
 <body class="font-sora">
-    <header>
-
+    <header class="bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
+        <!-- navbar -->
+        <div class="w-11/12 mx-auto my-6">
+            <div class="navbar border-b-[0.5px] border-b-primary lg:border-none">
+                <div class="flex-grow">
+            
+                    <a class="">
+                        <img src="c2-assets/logo-header.png" alt="">
+                    </a>
+                </div>
+                <div class="flex-grow hidden lg:flex">
+                    <ul class="flex space-x-8 text-xl text-text">
+                        <li><a class="nav-link">Product</a></li>
+                        <li><a class="nav-link">Services</a></li>
+                        <li><a class="nav-link">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex gap-3">
+                    <!-- navbar icons -->
+                    <button class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="#111111">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="#111111">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+            
+                    </div>
+                    <a class="btn-outline">Login</a>
+                    <a class="btn-primary">Register</a>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#179800">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="text-xl text-text menu dropdown-content bg-secoundry  z-[1] mt-4 w-52 p-8 shadow-xl">
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-primary hover:text-white transition">Product</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-primary hover:text-white transition">Services</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-primary hover:text-white transition">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- banner content -->
+        <div class="text-center space-y-8">
+            <h1 class="animate-fadeIn text-[30px] md:text-[56px] font-semibold">
+                Freshness <span class="text-primary">You Can <br>
+                Count</span> On, Prices You’ll Love!
+            </h1>
+            <p class="text-text text-xl">
+                Discover a variety of fresh groceries delivered to your doorstep.
+            </p>
+            <button class="btn-primary">Shop Now</button>
+        </div>
+        <!-- animated image -->
+        <div class="">
+            <img class="mx-auto animate" src="c2-assets/hero-vegetables.png" alt="Grocery Basket">
+        </div> 
     </header>
     <main>
 
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
