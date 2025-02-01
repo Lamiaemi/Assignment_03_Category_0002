@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="c2-assets/favicon.png" type="image/x-icon">
     <!-- Google font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,7 @@
     <!-- DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Freshness You Can Count On!</title>
     <script>
         tailwind.config = {
             theme: {
@@ -24,7 +25,7 @@
                         sora: ['Sora', 'serif'],
                     },
                     animation: {
-                        float: "float 3s ease-in-out infinite",
+                        float: "float 1.5s ease-in-out infinite",
                         fadeIn: "fadeIn 1.5s ease-out",
                     },
                     keyframes: {
@@ -36,6 +37,7 @@
                             from: { opacity: "0", transform: "translateY(-20px)" },
                             to: { opacity: "1", transform: "translateY(0)" },
                         },
+                        
                     },
                 }
             }
@@ -506,8 +508,8 @@
             </div>
          </section>
     </main>
-    <footer class="footer bg-primary text-secoundry p-10 pt-96">
-        <aside>
+    <footer class="footer bg-primary text-secoundry p-10 pt-80">
+        <aside class="space-y-4">
             <img src="c2-assets/logo-footer.png" alt="Footer showcasing grocery store logo and contact information.">
             <p>
                 Your trusted source <br>
@@ -521,18 +523,18 @@
             <a class="link link-hover">Contact us</a>
         </nav>
         <nav>
-            <a class="link link-hover">Follow US</a>
+            <a class="text-base">Follow US</a>
             <div class="grid grid-flow-col gap-4">
-                <a class="">
+                <a class="hover:animate-float">
                     <img src="c2-assets/1.png" alt="">
                 </a>
-                <a>
+                <a class="hover:animate-float">
                     <img src="c2-assets/2.png" alt="">
                 </a>
-                <a>
+                <a class="hover:animate-float">
                     <img src="c2-assets/3.png" alt="">
                 </a>
-                <a>
+                <a class="hover:animate-float">
                     <img src="c2-assets/4.png" alt="">
                 </a>
                 
